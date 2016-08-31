@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/seek_bar_interval_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/interval_parent_padding"
+        android:paddingTop="@dimen/interval_parent_padding">
+
+        <LinearLayout
+            android:id="@+id/seek_bar_interval_thumb_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/seek_bar_interval_thumb_inner_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/seek_bar_interval_vertical_line"
+                    android:layout_width="@dimen/interval_line_width"
+                    android:layout_height="@dimen/interval_line_height"
+                    android:background="@color/colorIntervalLine" />
+
+                <ImageView
+                    android:id="@+id/seek_bar_interval_thumb"
+                    android:layout_width="@dimen/interval_image_fix_size"
+                    android:layout_height="@dimen/interval_image_fix_size"
+                    android:layout_marginTop="@dimen/interval_image_padding"
+                    android:visibility="visible"
+                    tools:src="@drawable/dummy_thumb"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/seek_bar_interval_text"
+            android:textSize="@dimen/intervalTextSize"
+            android:textColor="@color/colorIntervalLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interval_text_padding"
+            android:gravity="center_horizontal"
+            tools:text="tag" />
+
+
+    </LinearLayout>
+</layout>
